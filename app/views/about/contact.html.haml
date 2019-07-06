@@ -1,0 +1,17 @@
+!!!
+%html
+%form.container
+  .form-group
+    %label{:for => "customerName"} Full Name
+    %input#exampleFormControlInput1.form-control{:placeholder => "John Smith", :type => "textarea"}/
+  .form-group
+    %label{:for => "customerEmail"} Email Address
+    %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+  .form-group
+    %label{:for => "customerPhoneNumber"} Phone Number
+    %input#exampleFormControlInput1.form-control{:placeholder => "647-404-4324", :type => "number"}/
+  .form-group
+    %label{:for => "exampleFormControlTextarea1"} Ask your questions here!
+    %textarea#questions.form-control{:rows => "5"}
+    %br
+    %input.btn.btn-info{:type => "submit", :value => "Submit Button"}/
