@@ -11,6 +11,11 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Haml
+gem 'haml'
+gem 'haml-rails', '~> 2.0', '>= 2.0.1'
+# Cucumber
+gem 'cucumber'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -40,6 +45,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+# for HTML to Haml
+gem 'hpricot'
+gem 'ruby_parser'
+gem 'html2haml'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
