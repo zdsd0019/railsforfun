@@ -1,17 +1,17 @@
 !!!
 %html
-%form.container
+%form.container.form{:action => "mailto:zdsd0019@gmail.com", :enctype => "text/plain", :method => "post"}
   .form-group
     %label{:for => "customerName"} Full Name
-    %input#exampleFormControlInput1.form-control{:placeholder => "John Smith", :type => "textarea"}/
+    %input#name.form-control{:placeholder => "John Smith", :type => "textarea", :required => ""}
   .form-group
     %label{:for => "customerEmail"} Email Address
-    %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+    %input#email.form-control{:placeholder => "name@example.com", :type => "email", :required => ""}
   .form-group
     %label{:for => "customerPhoneNumber"} Phone Number
-    %input#exampleFormControlInput1.form-control{:placeholder => "647-404-4324", :type => "number"}/
+    %input#phoneNumber.form-control{:placeholder => "647-404-4324", :type => "number", :required => ""}
   .form-group
-    %label{:for => "exampleFormControlTextarea1"} Ask your questions here!
-    %textarea#questions.form-control{:rows => "5"}
+    %label{:for => "questions"} Ask your questions here!
+    %textarea#questions.form-control{:placeholder => "Ask us any Personal/Corporate Tax and Book keeping questions here!!!", :rows => "4", :required => ""}
     %br
-    %input.btn.btn-info{:type => "submit", :value => "Submit Button"}/
+    %input.btn.btn-info.btn-block{:type => "submit", :value => "Submit"}

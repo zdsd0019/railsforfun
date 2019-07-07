@@ -1,7 +1,4 @@
 class AboutController < ApplicationController
-  def index
-  end
-
   def about
   end
 
@@ -9,5 +6,8 @@ class AboutController < ApplicationController
   end
 
   def contact
+  end
+
+  def test
   end
 end

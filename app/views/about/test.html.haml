@@ -1,0 +1,21 @@
+!!!
+%html
+  %body
+    %h2 Send e-mail to someone@example.com:
+    %form{:action => "mailto:zdsd0019@gmail.com", :enctype => "text/plain", :method => "post"}
+      Name:
+      %br/
+      %input{:name => "name", :type => "text"}/
+      %br/
+      E-mail:
+      %br/
+      %input{:name => "mail", :type => "text"}/
+      %br/
+      Comment:
+      %br/
+      %input{:name => "comment", :size => "50", :type => "text"}/
+      %br/
+      %br/
+      %input{:type => "submit", :value => "Send"}/
+      %input{:type => "reset", :value => "Reset"}/
+      %input.form-control{:class => "id=", :inputemail => "", :placeholder => "example@example.com", :required => "", :type => "email"}/
