@@ -10,4 +10,8 @@ class AboutController < ApplicationController
 
   def test
   end
+
+  def temp
+    redirect_to '/test'
+  end
 end

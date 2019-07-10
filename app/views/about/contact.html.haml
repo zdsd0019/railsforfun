@@ -1,17 +1,38 @@
-!!!
-%html
-%form.container.form{:action => "mailto:zdsd0019@gmail.com", :enctype => "text/plain", :method => "post"}
-  .form-group
-    %label{:for => "customerName"} Full Name
-    %input#name.form-control{:placeholder => "John Smith", :type => "textarea", :required => ""}
-  .form-group
-    %label{:for => "customerEmail"} Email Address
-    %input#email.form-control{:placeholder => "name@example.com", :type => "email", :required => ""}
-  .form-group
-    %label{:for => "customerPhoneNumber"} Phone Number
-    %input#phoneNumber.form-control{:placeholder => "647-404-4324", :type => "number", :required => ""}
-  .form-group
-    %label{:for => "questions"} Ask your questions here!
-    %textarea#questions.form-control{:placeholder => "Ask us any Personal/Corporate Tax and Book keeping questions here!!!", :rows => "4", :required => ""}
-    %br
-    %input.btn.btn-info.btn-block{:type => "submit", :value => "Submit"}
+%form#contact-form{:action => "contact.php", :method => "post", :role => "form"}
+  .messages
+  .controls
+    .row
+      .col-md-6
+        .form-group
+          %label{:for => "form_name"} First Name *
+          %input#form_name.form-control{"data-error" => "Firstname is required.", :name => "name", :placeholder => "Please enter your first name *", :required => "required", :type => "text"}
+          .help-block.with-errors
+      .col-md-6
+        .form-group
+          %label{:for => "form_lastname"} Last Name *
+          %input#form_lastname.form-control{"data-error" => "Lastname is required.", :name => "surname", :placeholder => "Please enter your last name *", :required => "required", :type => "text"}
+          .help-block.with-errors
+    .row
+      .col-md-6
+        .form-group
+          %label{:for => "form_email"} Email *
+          %input#form_email.form-control{"data-error" => "Valid email is required.", :name => "email", :placeholder => "Please enter your email *", :required => "required", :type => "email"}
+          .help-block.with-errors
+      .col-md-6
+        .form-group
+          %label{:for => "form_need"} Phone number *
+          %input#form_number.form-control{"data-error" => "Phone Number.", :name => "number", :placeholder => "Please enter your Phone Number *", :required => "required"}
+          .help-block.with-errors
+    .row
+      .col-md-12
+        .form-group
+          %label{:for => "form_message"} Message *
+          %textarea#form_message.form-control{"data-error" => "Please, leave us a message.", :name => "message", :placeholder => "Ask your questions here!! *", :required => "required", :rows => "4"}
+          .help-block.with-errors
+      .col-md-12
+        %input.btn.btn-success.btn-send.btn.block{:type => "submit", :value => "Send message"}
+    .row
+      .col-md-12
+        %p.text-muted
+          %strong *
+          %b These fields are required.
