@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
 
   # Test page stuff
-  # post '/test' => 'about#temp'
-  # get '/test' => 'about#test'
+  post '/test' => 'about#temp'
+  get '/test' => 'about#test'
   get '/test/:id' => 'about#question'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

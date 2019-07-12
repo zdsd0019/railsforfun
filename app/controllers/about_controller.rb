@@ -12,7 +12,7 @@ class AboutController < ApplicationController
   end
 
   def temp
-    redirect_to '/test/:id'
+    
   end
 
   def question

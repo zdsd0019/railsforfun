@@ -1,42 +1,42 @@
 class QuestionController < ApplicationController
   def index
-    @questionss = Questions.all
+    @question = Question.all
   end
 
   def show
-    @questions = Questions.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
   def new
-    @questions = Questions.new
+    @question = Question.new
   end
 
   def edit
-    @questions = Questions.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
   def create
-    @questions = Questions.new(Questions_params)
+    @question = Question.new(Question_params)
 
-    if @questions.save
-      redirect_to @questions
+    if @question.save
+      redirect_to @question
     else
       render 'new'
     end
   end
 
   def update
-  @questions = Questions.find(params[:id])
+  @question = Question.find(params[:id])
 
-  if @questions.update(Questions_params)
-    redirect_to @questions
+  if @question.update(Question_params)
+    redirect_to @question
   else
     render 'edit'
   end
 end
 
   private
-  def Questions_params
-    params.require(:Questions).permit(:title, :text)
+  def Question_params
+    params.require(:Question).permit(:title, :text)
   end
 end
