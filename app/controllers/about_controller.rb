@@ -12,6 +12,10 @@ class AboutController < ApplicationController
   end
 
   def temp
-    redirect_to '/test'
+    redirect_to '/test/:id'
+  end
+
+  def question
+    @question = Question.order(created_at: :desc).all
   end
 end

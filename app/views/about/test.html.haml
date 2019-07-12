@@ -1,33 +1,33 @@
-= form_with model: @questions, local: true do |form|{:action => "/contact", :method => "post", :role => "form"}
+= form_with model: @question, local: true do |form|{:action => "/contact", :method => "post", :role => "form"}
   .messages
   .controls
     .row
       .col-md-6
         .form-group
           %label{:for => "form_name"} First Name *
-          %input#form_name.form-control{"data-error" => "First Name is required.", :name => "name", :id => "inputFname", :placeholder => "Please enter your first name *", :required => "required", :type => "text"}
+          %input#form_name.form-control{"data-error" => "First Name is required.", :name => "question[name]", :id => "inputFname", :placeholder => "Please enter your first name *", :required => "required", :type => "text"}
           .help-block.with-errors
       .col-md-6
         .form-group
           %label{:for => "form_lastname"} Last Name *
-          %input#form_lastname.form-control{"data-error" => "Last Name is required.", :name => "surname", :id => "inputLName", :placeholder => "Please enter your last name *", :required => "required", :type => "text"}
+          %input#form_lastname.form-control{"data-error" => "Last Name is required.", :name => "question[name]", :id => "inputLName", :placeholder => "Please enter your last name *", :required => "required", :type => "text"}
           .help-block.with-errors
     .row
       .col-md-6
         .form-group
           %label{:for => "form_email"} Email *
-          %input#form_email.form-control{"data-error" => "Valid email is required.", :email => "email", :id => "inputEmail", :placeholder => "Please enter your email *", :required => "required", :type => "email"}
+          %input#form_email.form-control{"data-error" => "Valid email is required.", :email => "question[email]", :id => "inputEmail", :placeholder => "Please enter your email *", :required => "required", :type => "email"}
           .help-block.with-errors
       .col-md-6
         .form-group
           %label{:for => "form_need"} Phone number *
-          %input#form_number.form-control{"data-error" => "Phone Number.", :number => "number", :id => "inputNumber", :placeholder => "Please enter your Phone Number *", :required => "required"}
+          %input#form_number.form-control{"data-error" => "Phone Number.", :number => "question[number]", :id => "inputNumber", :placeholder => "Please enter your Phone Number *", :required => "required"}
           .help-block.with-errors
     .row
       .col-md-12
         .form-group
           %label{:for => "form_message"} Message *
-          %textarea#form_message.form-control{"data-error" => "Please, leave us a message.", :name => "message", :id => "inputMessage" :placeholder => "Ask your questions here!! *", :required => "required", :rows => "4"}
+          %textarea#form_message.form-control{"data-error" => "Please, leave us a message.", :name => "question[body]", :id => "inputMessage", :placeholder => "Ask your questions here!! *", :required => "required", :rows => "4"}
           .help-block.with-errors
       .col-md-12
         %input.btn.btn-success.btn-send.btn.block{:type => "submit", :value => "Send message"}
