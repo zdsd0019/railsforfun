@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_07_08_012817) do
 
-  create_table "questions", force: :cascade do |t|
+  create_table "question", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "phone_number", null: false

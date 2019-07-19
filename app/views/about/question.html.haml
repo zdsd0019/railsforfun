@@ -1,0 +1,20 @@
+!!!
+%html
+
+.container.mt-3
+- @question.each do |q|
+  %h2
+  .media.border.p-3
+    %img.mr-3.mt-3.rounded-circle{:alt => "Image Here", :src => "q.gravatar", :style => "width:60px;"}/
+    .media-body
+      %h4
+        = q.name
+        %small
+          %i asked a question
+      = q.body
+      .br
+      = q.email
+      .br
+      = q.phone_number
+      .br
+      = time_ago_in_words q.created_at
